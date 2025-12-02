@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Victor Torres</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Bai Jamjuree Google Font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,10 +18,10 @@
 
 	<!-- NAVIGATION BAR-->
 	<div class="sidebar">
-		<ul class="nav_list">
+		<!-- <ul class="nav_list">
 			<li>
 				<a href="#top">
-					<img src="{% static "media/img/L-favicon-32x32.png" %}" alt="logo" class="icons" id="menu-btn">
+					<img src="{% static 'media/icons/favicon-32x32.png' %}" alt="logo" class="icons" id="menu-btn">
 				</a>
 			</li>
 			<li>
@@ -41,27 +45,22 @@
 			<li>
 				<a href="#">
 					<button id="resume-btn">
-						<!-- <i class='bx bx-clipboard icons' id="resume-icon" style='color:#fdd44a'></i> -->
-						<!-- <i class='bx bx-clipboard icons' id="resume-icon" style='color:#eb1a41'></i> -->
-						<!-- <i class='bx bx-clipboard icons' id="resume-icon" style='color:#ff0055'></i> -->
-						<i class='bx bx-clipboard icons' id="resume-icon" style='color:#cc00ff'></i>
-						<!-- <i class='bx bx-clipboard icons' id="resume-icon" style='color:#8f00ff'></i> -->
-						<!-- <i class='bx bx-clipboard icons' id="resume-icon" style='color:#4b9cd3'></i> -->
+						<i class='bx bx-clipboard icons' id="resume-icon" style='color:#4b9cd3'></i>
 					</button>
 				</a>
 				<span class="tooltip" id="resume-tooltip">Resume</span>
 			</li>
-		</ul>
+		</ul> -->
 
 		<!-- Resume -->
-		<div class="modal-container" id="modal_container">
+		<!-- <div class="modal-container" id="modal_container">
 			<div class="modal">
-				<iframe src="{% static 'media/img/SWE_Resume_27062023.pdf' %}" width="100%" height="100%"></iframe>
-				<button id="close">Close</button>
+				<iframe src="{% static 'media/file/10102023_SWE_Resume.pdf' %}" width="100%" height="100%"></iframe>
+				<button id="button-close-resume">Close</button>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="socials">
+		<!-- <div class="socials">
 			<ul>
 				<li>
 					<a href="https://www.linkedin.com/in/cvlucastorres/" target="_blank" rel="noopener noreferrer"
@@ -76,146 +75,46 @@
 					</a>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 	</div>
 
 	<!-- LANDING PAGE -->
-	<div class="portfolio-container">
-		<div class="landing-page-section">
-			<div class="introduction">
-				<!-- <h1 class="my-name">Lucas Torres</h1> -->
-				<p class="intro">Hi, I'm</p>
-				<p class="my-name">C.V. Lucas Torres.</p>
-				<p class="aspiration">An aspiring <span id="profession">software engineer</span> based in Toronto.</p>
-				<div class="info">
-					<a href="#project-header"><button id="to-projects">Projects</button></a>
-				</div>
-			</div>
-		</div>
+	<div class="landing-page-container">
+		<div class="project-list-container">
+            <div class="projects">
+                {% for project in projects %}
+                <div class="breakpoint"></div>
+                    <div class="project-item">
+                        <div class="project-quick-info">
+                            <p class="project-title">{{ project.title }}</p>
+                            <div class="project-summary">
+                                <p>{{ project.description }}</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer">
+                                    <button class="button-call-to-action view-code">Code</button>
+                                </a>
+                                <a href="{{ project.live_url }}" target="_blank" rel="noopener noreferrer">
+                                    <button class="button-call-to-action view-code">Live</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-media">
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}" image class="project-images">
+                        </div>
+                    </div>
 
-		<!-- ABOUT ME SECTION -->
-		<div class="about-section">
-			<div class="section-headers" id="about-header">
-				<p>About</p>
-			</div>
-
-			<div class="section-content">
-				<div id="about-me-content">
-					<p class="section-title section-about-me">Who am I</p>
-					<p>
-						Greetings! I'm Lucas, a self-taught software engineer with a background in UX Design. My passion is in building digital products from start to finish that focus on solving real world problems.
-						<br>
-						<br>
-
-						After completing my capstone project for the UX Design course, I realized that my passion wasn't in design but in building products. Designing is fun, but, building products from scratch and solving complex problems along the way is far more fulfilling. I believe that most problems can be solved using technology. Therefore, I'm always thrilled to spend my free time learning new languages, skills, and build projects to hone my craft.
-
-						<br>
-						<br>
-						When I'm not coding, you can find me playing chess, video games, or learning game theory.
-					</p>
-				</div>
-				<div class="skill-section">
-					<p class="section-title section-skills">Skills</p>
-					<p>Here are a few technologies I've been working with recently:</p>
-					<div class="skills">
-						<ul>
-							<li>Python</li>
-							<li>C++</li>
-							<li>Django</li>
-						</ul>
-						<ul>
-							<li>SQL</li>
-							<li>Linux</li>
-							<li>Git</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- PROJECT SECTION -->
-		<div class="project-section">
-			<!-- Header -->
-			<div class="section-headers" id="project-header">
-				<p>Projects</p>
-			</div>
-
-			<!-- Project information -->
-			<div class="project-display">
-				<div class="project-info-display">
-					<div class="project-information">
-
-						<div class="project-image-section">
-							<p class="section-title section-img">Image</p>
-							<img class="project-image" id="project-image" src="">
-						</div>
-
-						<div class="project-details-section">
-							<div class="project-details">
-								<p class="section-title section-details">Details</p>
-								<div class="project-header-detail">
-									<p>Project</p>
-									<p>Year</p>
-									<p>Status</p>
-									<p>Tech Stack</p>
-									<p>Libraries</p>
-								</div>
-								<div class="project-inputs">
-									<p id="project-codename"></p>
-									<p id="project-date"></p>
-									<p id="project-status"></p>
-									<p id="project-tech"></p>
-									<p id="project-lib"></p>
-								</div>
-							</div>
-							<div class="project-buttons">
-								<a href="" target="_blank" class="btn-cta view-live" id="view-live-btn">Live</a>
-								<a href="" target="_blank" class="btn-cta view-code" id="view-code-btn">Code</a>
-							</div>
-						</div>
-
-						<div class="project-description-section">
-							<p class="section-title section-desc">Description</p>
-							<p class="project-description" id="project-description"></p>
-						</div>
-					</div>
-
-					<div class="project-display-separator"></div>
-
-				</div>
-
-				<!-- Project tile grid -->
-				<div class="projects">
-					{% for project in projects %}
-						<div onclick="change_project_details({{ project.id }})" class="project-block">
-							<div class="project-counter">
-								<p>0{{ project.id }}</p>
-								<div class="project-icon">
-									<p class="project-title">{{ project.title }}</p>
-								</div>
-							</div>
-						</div>
-					{% endfor %}
-				</div>
-		</div>
-
-		<!-- FOOTER -->
-		<div class="footer">
-			<div class="contact-me">
-				<div class="section-headers" id="contact-header">
-					<p>Get in touch</p>
-				</div>
-				<form method="POST" class="contact-form-email">
-					{% csrf_token %}
-					{% for field in form %}
-						{{ field }}
-						<br>
-					{% endfor %}
-					<div class="contact-me-btn-container">
-						<input type="submit" class="contact-form send-email-btn" value="Submit">
-					</div>
-				</form>	
-			</div>
+                    <!-- <div onclick="change_project_details({{ project.id }})" class="project-block">
+                        <div class="project-counter">
+                            <p>0{{ project.id }}</p>
+                            <div class="project-icon">
+                                <p class="project-title">{{ project.title }}</p>
+                            </div>
+                        </div>
+                    </div> -->
+                {% endfor %}
+                <div class="breakpoint"></div>
+            </div>
 		</div>
 	</div>
 

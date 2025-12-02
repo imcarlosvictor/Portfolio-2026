@@ -1,0 +1,75 @@
+:root {
+    --white: #dfdfdf;
+    --black: #181818;
+    --dark-gray: #212221;
+    --soft-blue: #cacce1;
+}
+
+* {
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* MAIN */
+/* ------------------------------------------------------------------------------- */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100%;
+    background: var(--black);
+    padding: 4em;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Project Section */
+/* ------------------------------------------------------------------------------- */
+
+.breakpoint {
+    border: var(--dark-gray) 1px solid;
+    margin: 1.7em 0;
+}
+
+.project-item {
+    padding-left: 3em;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    /* border-top: var(--dark-gray) 1px solid;
+    border-bottom: var(--dark-gray) 1px solid; */
+}
+
+.project-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.project-quick-info {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.project-images {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.button-call-to-action {
+    background: var(--white);
+    border: none;
+    color: var(--black);
+    padding: .7em 2em;
+    margin-right: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button-call-to-action:hover {
+    background: var(--soft-blue);
+}
