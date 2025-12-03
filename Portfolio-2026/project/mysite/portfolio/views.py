@@ -16,7 +16,7 @@ def home(request):
     for project in projects:
         project_data[project.id] = {
             'title': project.title,
-            'image': str(project.image),
+            # 'image': str(project.image),
             'description': project.description,
             'github_url': project.github_url,
             'live_url': project.live_url,

@@ -99,8 +99,15 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="project-media">
-                            <img src="{{ project.image.url }}" alt="{{ project.title }}" image class="project-images">
+                        <div class="project-media-container">
+                            {% for media in project.media_list.all %}
+                                {% if media.media_type == 'image' %}
+                                    <img src="{{ media.file.url }}" alt="{{ project.title }}" class="project-media">
+                                {% else %}
+                                    <video src="{{ media.file.url }}" class="project-media project-video-demo" controls></video>
+                                {% endif %}
+                            {% endfor %}
+                            <!-- <img src="{{ project.image.url }}" alt="{{ project.title }}" image class="project-images"> -->
                         </div>
                     </div>
 

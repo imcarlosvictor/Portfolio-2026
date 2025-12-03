@@ -37,7 +37,7 @@ body {
 }
 
 .project-item {
-    padding-left: 3em;
+    padding-left: 2em;
     display: grid;
     grid-template-columns: 2fr 5fr;
     /* border-top: var(--dark-gray) 1px solid;
@@ -55,10 +55,16 @@ body {
     grid-template-rows: 1fr 2fr 1fr;
 }
 
-/* .project-images {
+.project-media-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .8em;
+}
+
+.project-media {
     max-width: 200px;
     max-height: 200px;
-} */
+}
 
 .button-call-to-action {
     background: var(--white);
