@@ -23,6 +23,7 @@ class ProjectAdmin(admin.ModelAdmin):
     search_fields = ("title",)
     list_filter = ['title']
     inlines = [ProjectMediaInline]
+    prepopulated_fields = {'slug': ('title',)}
 
 
 @admin.register(ProjectMedia)

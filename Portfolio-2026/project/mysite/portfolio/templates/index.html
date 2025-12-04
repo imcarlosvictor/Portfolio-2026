@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Victor Torres</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- Bai Jamjuree Google Font-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,39 +20,39 @@
 
 	<!-- NAVIGATION BAR-->
 	<div class="sidebar">
-		<!-- <ul class="nav_list">
-			<li>
-				<a href="#top">
-					<img src="{% static 'media/icons/favicon-32x32.png' %}" alt="logo" class="icons" id="menu-btn">
-				</a>
-			</li>
-			<li>
-				<a href="#about-header">
-					<i class='bx bxs-smile icons' id="about-btn"></i>
-				</a>
-				<span class="tooltip">About</span>
-			</li>
-			<li>
-				<a href="#project-header">
-					<i class='bx bxs-book-alt icons' id="projects-btn"></i>
-				</a>
-				<span class="tooltip">Projects</span>
-			</li>
-			<li>
-				<a href="#contact-header">
-					<i class='bx bxs-contact icons' id="contact-btn"></i>
-				</a>
-				<span class="tooltip">Contact</span>
-			</li>
-			<li>
-				<a href="#">
-					<button id="resume-btn">
-						<i class='bx bx-clipboard icons' id="resume-icon" style='color:#4b9cd3'></i>
-					</button>
-				</a>
-				<span class="tooltip" id="resume-tooltip">Resume</span>
-			</li>
-		</ul> -->
+        <a href="#top">
+            <img src="{% static 'media/icons/favicon-32x32.png' %}" alt="logo" class="icons" id="logo-button">
+        </a>
+		<ul class="nav-list">
+            <div class="socials-nav">
+                <li>
+                    <a href="{% url 'about' %}">
+                        <i class='fa-solid fa-user' id="about-button"></i>
+                    </a>
+                    <span class="tooltip"></span>
+                </li>
+                <li>
+                    <a href="https://github.com/imcarlosvictor" target="#">
+                        <i class='fa-brands fa-github' id="github-button"></i>
+                    </a>
+                    <span class="tooltip"></span>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/imcarlosvictor/" target="#">
+                        <i class='fa-brands fa-linkedin-in' id="linkedin-button"></i>
+                    </a>
+                    <span class="tooltip"></span>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <button id="resume-btn">
+                            <i class='bx bx-clipboard icons' id="resume-icon" style='color:#4b9cd3'></i>
+                        </button>
+                    </a>
+                    <span class="tooltip" id="resume-tooltip">Resume</span>
+                </li> -->
+            </div>
+		</ul>
 
 		<!-- Resume -->
 		<!-- <div class="modal-container" id="modal_container">
