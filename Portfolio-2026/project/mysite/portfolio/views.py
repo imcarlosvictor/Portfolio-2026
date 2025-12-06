@@ -8,7 +8,7 @@ from .forms import ContactForm
 from json import dumps
 
 # Create your views here.
-def home(request):
+def projects(request):
     # Grab all projects for display
     projects = Project.objects.all()
     # Create a project data dictionary and pass the project id to get all data
@@ -43,7 +43,7 @@ def home(request):
         # 'form': form
     }
 
-    return render(request, 'index.html', context)
+    return render(request, 'pages/projects.html', context)
 
 def about(request):
     return render(request, 'pages/about.html')

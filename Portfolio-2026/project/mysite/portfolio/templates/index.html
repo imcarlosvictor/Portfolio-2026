@@ -80,52 +80,10 @@
 		</div> -->
 	</div>
 
-	<!-- LANDING PAGE -->
+	<!-- Content -->
 	<div class="landing-page-container">
-		<div class="project-list-container">
-            <div class="projects">
-                {% for project in projects %}
-                <div class="breakpoint"></div>
-                    <div class="project-item">
-                        <div class="project-quick-info">
-                            <p class="project-title">{{ project.title }}</p>
-                            <div class="project-summary">
-                                <p>{{ project.description }}</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer">
-                                    <button class="button-call-to-action view-code">Code</button>
-                                </a>
-                                <a href="{{ project.live_url }}" target="_blank" rel="noopener noreferrer">
-                                    <button class="button-call-to-action view-code">Demo</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-media-container">
-                            {% for media in project.media_list.all %}
-                                {% if media.media_type == 'image' %}
-                                    <img src="{{ media.file.url }}" alt="{{ project.title }}" class="project-media">
-                                {% else %}
-                                    <video src="{{ media.file.url }}" class="project-media project-video-demo" controls></video>
-                                {% endif %}
-                            {% endfor %}
-                            <!-- <img src="{{ project.image.url }}" alt="{{ project.title }}" image class="project-images"> -->
-                        </div>
-                    </div>
-
-                    <!-- <div onclick="change_project_details({{ project.id }})" class="project-block">
-                        <div class="project-counter">
-                            <p>0{{ project.id }}</p>
-                            <div class="project-icon">
-                                <p class="project-title">{{ project.title }}</p>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-                {% endfor %}
-                <div class="breakpoint"></div>
-            </div>
-		</div>
+		{% block content %}
+		{% endblock %}
 	</div>
 
 	<script>
