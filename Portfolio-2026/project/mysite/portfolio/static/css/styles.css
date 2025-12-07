@@ -34,7 +34,6 @@ body {
 	background-size: 400% 400%;
 	height: 100vh;
     background: var(--black);
-    /* background: linear-gradient(-45deg, var(--gd1), var(--gd2), var(--gd3)); */
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -145,3 +144,62 @@ body {
 /* ------------------------------------------------------------------------------- */
 /* ABOUT ME SECTION */
 /* ------------------------------------------------------------------------------- */
+.about-me-section {
+    width: 90vw;
+    height: 90vh;
+    margin: 2em;
+    padding: 2em 20em;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* background: gray; */
+}
+
+.introduction {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.my-name {
+    margin-top: .6em;
+    color: var(--soft-neon-yellow);
+}
+
+.about-me-content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-description {
+    margin-top: 2em;
+    font-size: 1.2em;
+    line-height: 1em;
+}
+
+.about-me-socials {
+    margin-top: 1.7em;
+    display: flex;
+    gap: 1em;
+    font-size: 1.7em;
+    padding-left: 1em;
+    align-items: center;
+}
+
+#button-resume {
+    background: var(--white);
+    color: var(--black);
+    border: none;
+    padding: .5em 1.8em;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+#button-resume:hover {
+    background: var(--soft-neon-yellow);
+}
+
+#button-linkedin-about-me, #button-github-about-me {
+}
