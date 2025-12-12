@@ -281,7 +281,7 @@ body {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
-    align-items: center;
+    align-items: start;
     font-size: 1.7em;
 }
 
@@ -302,11 +302,9 @@ body {
 }
 
 .contact-me {
-    /* border: .5px solid #3a3a3a; */
     border-radius: 10px;
     padding: 1.5em;
     display: grid;
-    /* justify-content: center; */
     align-items: center;
 }
 
