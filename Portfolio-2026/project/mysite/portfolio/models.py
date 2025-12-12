@@ -46,5 +46,5 @@ class ProjectMedia(models.Model):
 
         if self.media_type == 'image' and image_count >= 4:
             raise ValidationError('A project must have 4 images.')
-        if self.media_type == 'video' and image_count >= 1:
+        if self.media_type == 'video' and video_count >= 1:
             raise ValidationError('This project has a video demo.')

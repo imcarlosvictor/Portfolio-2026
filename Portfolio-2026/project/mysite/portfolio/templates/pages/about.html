@@ -8,7 +8,7 @@
                 <div class="introduction">
                     <p class="intro">Hello, I'm</p>
                     <p class="my-name">Carlos Victor Torres</p>
-                    <p class="aspiration">A <span id="profession">software engineer</span> based in Toronto.</p>
+                    <p class="aspiration">A <span id="profession">software developer</span> based in Toronto.</p>
                 </div>
             </div>
 
@@ -25,21 +25,6 @@
                         </p>
                     </div>
                     <div class="skill-section">
-                        <div class="name-and-socials">
-                            <div class="about-me-socials">
-                                <a href="https://www.linkedin.com/in/cvlucastorres/" target="_blank" rel="noopener noreferrer"
-                                    class="socials linkedin">
-                                    <i class='fa-brands fa-linkedin-in' id="button-linkedin-about-me"></i>
-                                </a>
-                                <a href="https://github.com/imcvlucas" target="_blank" rel="noopener noreferrer"
-                                    class="socials github">
-                                    <i class='fa-brands fa-github' id="button-github-about-me"></i>
-                                </a>
-                            </div>
-                            <a href="#">
-                                <button id="button-contact-me">Contact Me</button>
-                            </a>
-                        </div>
                         <div class="skills">
                             <div class="skill-grouping">
                                 <p class="programming-language">Python</p>
@@ -81,10 +66,44 @@
                     </div>
                 </div>
 
+                <div class="contact-section">
+                    <div class="socials-list-section">
+                        <div class="my-socials">
+                            <div class="socials1 socials-email">
+                                <a href="https://www.linkedin.com/in/cvlucastorres/" target="_blank" rel="noopener noreferrer"
+                                    class="socials linkedin">
+                                    <i class='fa-solid fa-envelope' id="button-email-about-me"></i>
+                                </a>
+                                <div class="social-info">
+                                    <p class="social-header">email</p>
+                                    <p>imcarlosvictor@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="socials2 socials-linkedin">
+                                <a href="https://www.linkedin.com/in/cvlucastorres/" target="_blank" rel="noopener noreferrer"
+                                    class="socials linkedin">
+                                    <i class='fa-brands fa-linkedin-in' id="button-linkedin-about-me"></i>
+                                </a>
+                                <div class="social-info">
+                                    <p class="social-header">linkedin</p>
+                                    <p>www.linkedin.com/in/imcarlosvictor</p>
+                                </div>
+                            </div>
+                            <div class="socials3 socials-github">
+                                <a href="https://www.linkedin.com/in/cvlucastorres/" target="_blank" rel="noopener noreferrer"
+                                    class="socials linkedin">
+                                    <i class='fa-brands fa-github' id="button-github-about-me"></i>
+                                </a>
+                                <div class="social-info">
+                                    <p class="social-header">github</p>
+                                    <p>github.com/imcarlosvictor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- <div class="contact-section">
                     <div class="contact-me">
-                        <div class="section-headers" id="contact-header">
+                        <div id="contact-header">
                             <p>Get in touch</p>
                         </div>
                         <form method="POST" class="contact-form-email">
@@ -93,12 +112,12 @@
                                 {{ field }}
                                 <br>
                             {% endfor %}
-                            <div class="contact-me-btn-container">
-                                <input type="submit" class="contact-form send-email-btn" value="Submit">
+                            <div class="contact-me-button-container">
+                                <input type="submit" id="button-send-email" value="Send Message">
                             </div>
                         </form>	
                     </div>
-                </div> -->
+                </div>
 
             </div>
         </div>

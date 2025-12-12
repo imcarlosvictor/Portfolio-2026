@@ -21,7 +21,15 @@ def projects(request):
             'live_url': project.live_url,
         }
     project_data_JSON = dumps(project_data)
+    
+    context = {
+        'projects': projects,
+        'project_data_JSON': project_data_JSON,
+    }
 
+    return render(request, 'pages/projects.html', context)
+
+def about(request):
     # Handle contact form submission
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -34,16 +42,13 @@ def projects(request):
             # Format to send to business email
             subject = f'{name.capitalize()} from {company.upper()}'
             subject_message = email + '\n\n' + message
-        else:
-            form = ContactForm()
-    
+
+            send_mail(subject, subject_message, email, ['imcarlosvictor@gmail.com'])
+    else:
+        form = ContactForm()
+
     context = {
-        'projects': projects,
-        'project_data_JSON': project_data_JSON,
-        # 'form': form
+        'form': form
     }
 
-    return render(request, 'pages/projects.html', context)
-
-def about(request):
-    return render(request, 'pages/about.html')
+    return render(request, 'pages/about.html', context)
