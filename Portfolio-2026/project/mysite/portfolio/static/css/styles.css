@@ -7,9 +7,12 @@
     --light-gray: #808080;
     --soft-blue: #cacce1;
     --soft-neon-yellow: #f8f801;
+    --neon-yellow: #fff001;
     /* --soft-red: #fd4d5a; */
     --soft-red: #ff001e;
+    --red: #f30e0f;
     --soft-green: #27a888;
+    --royal-blue: #2c61ff;
     --yellow: #fd8b03;
 
     --blue-gray: #b6bec8;
@@ -45,6 +48,34 @@ body {
 	background-size: 400% 400%;
 	height: 100vh;
     background: var(--black);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* MEDIA QUERIES */
+/* ------------------------------------------------------------------------------- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -176,7 +207,8 @@ body {
 
 .my-name {
     /* color: var(--soft-neon-yellow); */
-    color: var(--yellow);
+    /* color: var(--yellow); */
+    color: var(--neon-yellow);
 }
 
 .about-me-content {
@@ -218,6 +250,7 @@ body {
 .skills li {
     list-style: none;
     font-size: 1.1em;
+    color: #a5b8c8;
 }
 
 .skills ul {
@@ -230,7 +263,8 @@ body {
 .programming-language {
     font-weight: 600;
     /* color: var(--soft-green); */
-    color: #a5b8c8;
+    /* color: #a5b8c8; */
+    color: #ededed;
     font-size: 1.2em;
 }
 
@@ -347,6 +381,5 @@ body {
 }
 
 #button-send-email:hover {
-    background: var(--soft-green)
-    /* opacity: .7; */
+    opacity: .7;
 }
