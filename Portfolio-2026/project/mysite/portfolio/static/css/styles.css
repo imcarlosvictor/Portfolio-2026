@@ -1,19 +1,23 @@
 :root {
     /* --white: #dfdfdf; */
     --white: #afbbbd;
-    --black: #181818;
-    --washed-black: #151a1a;
+    /* --black: #181818; */
+    --black: #111111;
+    /* --washed-black: #151a1a; */
     --dark-gray: #212221;
     --light-gray: #808080;
     --soft-blue: #cacce1;
     --soft-neon-yellow: #f8f801;
     --neon-yellow: #fff001;
+    --neon-green: #c8fe07;
     /* --soft-red: #fd4d5a; */
     --soft-red: #ff001e;
     --red: #f30e0f;
     --soft-green: #27a888;
     --royal-blue: #2c61ff;
     --yellow: #fd8b03;
+    --orange: #f76005;
+    --orange: #ff4807;
 
     --blue-gray: #b6bec8;
     /* gradient */
@@ -86,16 +90,17 @@ body {
     padding: 1em 0 1em 0;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     height: 97%;
     width: 3.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    border: solid #2f2f31 .5px;
+    /* border: solid #2f2f31 .5px;
     border-radius: 10px;
     background: var(--dark-gray);
+    background: #191919; */
 }
 
 #logo-button {
@@ -130,11 +135,11 @@ body {
 .breakpoint {
     border: #9ca3a6 1px solid;
     opacity: .1;
-    margin-right: 1.8em;
+    margin-left: 3.5em;
 }
 
 .project-item {
-    margin: .5em 2em .5em 0;
+    margin: .5em 0 .5em 2em;
     padding: 1em 1em 1em 2em;
     display: grid;
     grid-template-columns: 2fr 5fr;
@@ -206,9 +211,8 @@ body {
 }
 
 .my-name {
-    /* color: var(--soft-neon-yellow); */
-    /* color: var(--yellow); */
-    color: var(--neon-yellow);
+    /* color: var(--neon-yellow); */
+    color: var(--neon-green);
 }
 
 .about-me-content {
@@ -280,7 +284,7 @@ body {
     color: var(--black);
     border: none;
     padding: .5em 1.2em;
-    border-radius: 5px;
+border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     font-weight: 400;
