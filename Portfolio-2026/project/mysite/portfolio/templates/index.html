@@ -1,253 +1,184 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Carlos Victor Torres</title>
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+		<!-- Bai Jamjuree Google Font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap" rel="stylesheet">
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Victor Torres</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- Bai Jamjuree Google Font-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+	<body>
+		<a name="top"></a>
 
-<body>
-    <a name="top"></a>
-
-	<!-- NAVIGATION BAR-->
-	<div class="sidebar">
-        <a href="{% url 'projects' %}">
-            <img src="{% static 'media/icons/favicon-32x32.png' %}" alt="logo" class="icons" id="logo-button">
-        </a>
-		<ul class="nav-list">
-            <div class="socials-nav">
-                <li>
-                    <a href="{% url 'about' %}">
-                        <i class='fa-solid fa-user' id="about-button"></i>
-                    </a>
-                    <span class="tooltip"></span>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/imcarlosvictor/" target="#">
-                        <i class='fa-brands fa-linkedin-in' id="linkedin-button"></i>
-                    </a>
-                    <span class="tooltip"></span>
-                </li>
-                <li>
-                    <a href="https://github.com/imcarlosvictor" target="#">
-                        <i class='fa-brands fa-github' id="github-button"></i>
-                    </a>
-                    <span class="tooltip"></span>
-                </li>
-            </div>
-		</ul>
-
-		<!-- Resume -->
-		<!-- <div class="modal-container" id="modal_container">
-			<div class="modal">
-				<iframe src="{% static 'media/file/10102023_SWE_Resume.pdf' %}" width="100%" height="100%"></iframe>
-				<button id="button-close-resume">Close</button>
-			</div>
-		</div> -->
-	</div>
-
-	<!-- Content -->
-	<div class="landing-page-container">
-		<div class="project">
-			<div class="project-icon-card">
-				<div class="project-icon-image-container">
+		<!-- NAVIGATION BAR-->
+		<div class="sidebar">
+			<a href="{% url 'projects' %}">
+				<img src="{% static 'media/icons/favicon-32x32.png' %}" alt="logo" class="icons" id="logo-button">
+			</a>
+			<ul class="nav-list">
+				<div class="socials-nav">
+					<li>
+						<a href="{% url 'about' %}">
+							<i class='fa-solid fa-user' id="about-button"></i>
+						</a>
+						<span class="tooltip"></span>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/imcarlosvictor/" target="#">
+							<i class='fa-brands fa-linkedin-in' id="linkedin-button"></i>
+						</a>
+						<span class="tooltip"></span>
+					</li>
+					<li>
+						<a href="https://github.com/imcarlosvictor" target="#">
+							<i class='fa-brands fa-github' id="github-button"></i>
+						</a>
+						<span class="tooltip"></span>
+					</li>
 				</div>
-			</div>
-			<div class="project-information-container">
-				<div class="project-title">
-					<p>{{ project.title }}</p>
-					<p>Red Notice Registry</p>
+			</ul>
+
+			<!-- Resume -->
+			<!-- <div class="modal-container" id="modal_container">
+				<div class="modal">
+					<iframe src="{% static 'media/file/10102023_SWE_Resume.pdf' %}" width="100%" height="100%"></iframe>
+					<button id="button-close-resume">Close</button>
 				</div>
-				<div class="project-description">
-					<p>{{ project.description }}</p>
-					<p>description</p>
-				</div>
-				<div class="project-cta">
-					<div class="project-github-btn">
-						<p>{{ project.github_url }}</p>
-						<p>github</p>
-					</div>
-					<div class="project-live-btn">
-						<p>{{ project.live_url }}</p>
-						<p>live</p>
-					</div>
-				</div>
-			</div>
+			</div> -->
 		</div>
 
-		<div class="project">
-			<div class="project-icon-card">
-				<div class="project-icon-image-container">
-				</div>
-			</div>
+		<div class="crosshair-bg"></div>
 
-			<div class="project-information-container">
-				<div class="project-title">
-					<p>{{ project.title }}</p>
-					<p>title</p>
-				</div>
-				<div class="project-description">
-					<p>{{ project.description }}</p>
-					<p>description</p>
-				</div>
-				<div class="project-cta">
-					<div class="project-github-btn">
-						<p>{{ project.github_url }}</p>
-						<p>github</p>
-					</div>
-					<div class="project-live-btn">
-						<p>{{ project.live_url }}</p>
-						<p>live</p>
-					</div>
-				</div>
-			</div>
+		<!-- Content -->
+		<div class="landing-page-container">
 		</div>
-		<div class="project">
-			<div class="project-icon-card">
-				<div class="project-icon-image-container">
-				</div>
-			</div>
 
-			<div class="project-information-container">
-				<div class="project-title">
-					<p>{{ project.title }}</p>
-					<p>title</p>
-				</div>
-				<div class="project-description">
-					<p>{{ project.description }}</p>
-					<p>description</p>
-				</div>
-				<div class="project-cta">
-					<div class="project-github-btn">
-						<p>{{ project.github_url }}</p>
-						<p>github</p>
+		<div class="project-list-container">
+			{% block context %}
+				{% for project in projects %}
+					<div class="project-list-items">
+						<div class="project-icon-card">
+							<div class="project-icon-image-container">
+								<!-- <iframe src="https://lottie.host/embed/242681f5-6c5b-4002-9d8a-e1871e77e61e/kozvQ2x0rp.lottie"></iframe> -->
+								<!-- <iframe src="https://lottie.host/embed/8cba020e-da2c-465e-b0a7-0b4df6a22353/zFREfOKTxN.lottie"></iframe> -->
+								<!-- <iframe src="https://lottie.host/embed/ef363de0-273b-429c-a406-388c2f1f92c4/E6iR8xXdEO.lottie"></iframe> -->
+							</div>
+						</div>
+						<div class="project-information-container">
+							<div class="project-title">
+								<p>{{ project.title }}</p>
+							</div>
+							<div class="project-description">
+								<p>{{ project.description }}</p>
+								<p>description</p>
+							</div>
+							<div class="project-cta">
+								<div class="project-github-btn">
+									<p>{{ project.github_url }}</p>
+									<p>github</p>
+								</div>
+								<div class="project-live-btn">
+									<p>{{ project.live_url }}</p>
+									<p>live</p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="project-live-btn">
-						<p>{{ project.live_url }}</p>
-						<p>live</p>
-					</div>
-				</div>
-			</div>
+				{% endfor %}
+			{% endblock %}
 		</div>
-	</div>
 
-	<div class="project-list">
-		<p>hfweofihew</p>
-		{% block content %}
-			<div class="project-container">
-				<div class="project-information">
-					<div class="project-title">
-						<p>{{ project.title }}</p>
-					</div>
-					<div class="project-title">
-						<p>{{ project.title }}</p>
-					</div>
-				</div>
-			</div>
-		{% endblock %}
+		<!-- <script>
+			const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
-	</div>
+			accordionItemHeaders.forEach(accordionItemHeader => {
+				accordionItemHeader.addEventListener("click", event => {
 
-	<script>
-		const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+					// Uncomment in case you only want to allow for the display of only one collapsed item at a time!
 
-		accordionItemHeaders.forEach(accordionItemHeader => {
-			accordionItemHeader.addEventListener("click", event => {
+					const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+					if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+					currentlyActiveAccordionItemHeader.classList.toggle("active");
+					currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+					}
 
-				// Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+					accordionItemHeader.classList.toggle("active");
+					const accordionItemBody = accordionItemHeader.nextElementSibling;
+					if(accordionItemHeader.classList.contains("active")) {
+						accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+					}
+					else {
+						accordionItemBody.style.maxHeight = 0;
+					}
 
-				const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-				if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-				  currentlyActiveAccordionItemHeader.classList.toggle("active");
-				  currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-				}
-
-				accordionItemHeader.classList.toggle("active");
-				const accordionItemBody = accordionItemHeader.nextElementSibling;
-				if(accordionItemHeader.classList.contains("active")) {
-					accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-				}
-				else {
-					accordionItemBody.style.maxHeight = 0;
-				}
-
+				});
 			});
-		});
 
-		var form_fields = document.querySelector(".contact-form-email").getElementsByTagName("input");
-		var text_field = document.getElementById("id_message");
-		form_fields[1].placeholder = "Name";
-		form_fields[2].placeholder = "Email";
-		form_fields[3].placeholder = "Company";
-		text_field.placeholder = "Shoot me a message!";
+			var form_fields = document.querySelector(".contact-form-email").getElementsByTagName("input");
+			var text_field = document.getElementById("id_message");
+			form_fields[1].placeholder = "Name";
+			form_fields[2].placeholder = "Email";
+			form_fields[3].placeholder = "Company";
+			text_field.placeholder = "Shoot me a message!";
 
-		// Modal settings
-		const open = document.getElementById("resume-btn");
-		const modal_container = document.getElementById("modal_container");
-		const close = document.getElementById("close");
+			// Modal settings
+			const open = document.getElementById("resume-btn");
+			const modal_container = document.getElementById("modal_container");
+			const close = document.getElementById("close");
 
-		open.addEventListener("click", () => {
-			modal_container.classList.add("show");
-		});
+			open.addEventListener("click", () => {
+				modal_container.classList.add("show");
+			});
 
-		close.addEventListener("click", () => {
-			modal_container.classList.remove("show");
-		});
-	</script>
+			close.addEventListener("click", () => {
+				modal_container.classList.remove("show");
+			});
+		</script>
 
-	<script>
-		let btn = document.getElementsByClassName("project-grid-btn");
-		var project_data = JSON.parse("{{ project_data_JSON|escapejs }}");
+		<script>
+			let btn = document.getElementsByClassName("project-grid-btn");
+			var project_data = JSON.parse("{{ project_data_JSON|escapejs }}");
 
-		function change_project_details(project_id) {
-				document.getElementById("project-image").src = project_data[project_id]['image'];
-				document.getElementById("project-codename").innerHTML = project_data[project_id]['title'];
-				document.getElementById("project-date").innerHTML = project_data[project_id]['year'];
-				document.getElementById("project-tech").innerHTML = project_data[project_id]['tech_stack'].join(', ');
-				document.getElementById("project-lib").innerHTML = project_data[project_id]['libraries'].join(', ');
-				document.getElementById("project-description").innerHTML = project_data[project_id]['description'];
+			function change_project_details(project_id) {
+					document.getElementById("project-image").src = project_data[project_id]['image'];
+					document.getElementById("project-codename").innerHTML = project_data[project_id]['title'];
+					document.getElementById("project-date").innerHTML = project_data[project_id]['year'];
+					document.getElementById("project-tech").innerHTML = project_data[project_id]['tech_stack'].join(', ');
+					document.getElementById("project-lib").innerHTML = project_data[project_id]['libraries'].join(', ');
+					document.getElementById("project-description").innerHTML = project_data[project_id]['description'];
 
-				// Project status
-				if (project_data[project_id]['status']) {
-					document.getElementById("project-status").innerHTML = "Completed";
-				} else {
-					document.getElementById("project-status").innerHTML = "In progress";
-				}
+					// Project status
+					if (project_data[project_id]['status']) {
+						document.getElementById("project-status").innerHTML = "Completed";
+					} else {
+						document.getElementById("project-status").innerHTML = "In progress";
+					}
 
-				// Live URL button
-				if (project_data[project_id]['live_url'] === null) {
-					document.getElementById("view-live-btn").style = "pointer-events: none; cursor: default";
-				} else {
-					document.getElementById("view-live-btn").style = "pointer-events: auto; cursor: pointer";
-					document.getElementById("view-live-btn").href = project_data[project_id]['live_url'];
-				}
+					// Live URL button
+					if (project_data[project_id]['live_url'] === null) {
+						document.getElementById("view-live-btn").style = "pointer-events: none; cursor: default";
+					} else {
+						document.getElementById("view-live-btn").style = "pointer-events: auto; cursor: pointer";
+						document.getElementById("view-live-btn").href = project_data[project_id]['live_url'];
+					}
 
-				// Code URL Button
-				if (project_data[project_id]['code_url'] === null) {
-					document.getElementById("view-code-btn").style = "pointer-events: none; cursor: not-allowed;";
-				} else {
-					document.getElementById("view-code-btn").style = "pointer-events: auto; cursor: pointer";
-					document.getElementById("view-code-btn").href = project_data[project_id]['code_url'];
-				}
-		};
+					// Code URL Button
+					if (project_data[project_id]['code_url'] === null) {
+						document.getElementById("view-code-btn").style = "pointer-events: none; cursor: not-allowed;";
+					} else {
+						document.getElementById("view-code-btn").style = "pointer-events: auto; cursor: pointer";
+						document.getElementById("view-code-btn").href = project_data[project_id]['code_url'];
+					}
+			};
 
-		<!-- Default Values -->
-		change_project_details(1);
-	</script>
+		</script> -->
 
-</body> 
-
+	</body> 
 </html>
-
-
-
-e
