@@ -1,34 +1,26 @@
 :root {
     /* --white: #dfdfdf; */
     --white: #afbbbd;
-    /* --black: #181818; */
-    /* --black: #111111;
-    --black: #0a0a0a; */
-    --black: #05090a;
+    /* --black: #111111; */
+    --black: #0a0a0a;
+    /* --black: #05090a; */
     --washed-black: #1a2121;
     --dark-gray: #212221;
     --washed-grey: #222222;
     --light-gray: #808080;
-    --soft-blue: #cacce1;
+
+    --dark-teal: #266677;
+    --marathon-yellow: #cfff00;
     --soft-neon-yellow: #f8f801;
     --neon-yellow: #fffb29;
-    /* --neon-green: #c8fe07; */
-    --dark-teal: #266677;
     /* --soft-red: #fd4d5a; */
-    --soft-red: #ff001e;
-    --red: #f30e0f;
-    --soft-green: #27a888;
-    --royal-blue: #2c61ff;
-    --yellow: #fd8b03;
-    --orange: #f76005;
-    --orange: #ff4807;
+    /* --soft-red: #ff001e; */
 
     --blue-gray: #b6bec8;
     /* gradient */
     --gd1: #d2d4d5;
     --gd2: #a9abb0;
     --gd3: #bdbdc6;
-    /* --neon-green: #a8ff1a; */
 }
 
 * {
@@ -168,7 +160,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5em;
-    background-color: #05090a;
+    --black: #0a0a0a;
 
     /* display: flex;
     justify-content: space-around; */
@@ -194,16 +186,24 @@ body {
     width: 150px;
     height: 180px;
     padding: 24px;
-    background: #bbc9c7;
+    /* background: #bbc9c7; */
+    /* background: #565d72; */
+    background: #444959;
+    background: linear-gradient(0deg, #5f687b 10%, #444959 100%);
+    background: linear-gradient(0deg, #222222 10%, var(--washed-black) 100%);
     color: var(--black);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.02);
     clip-path: polygon(
-        12% 92%, 
+        5% 92%, 
+        2% 90%, 
+        2% 50%, 
+        12% 50%, 
         12% 36%, /* start of left inset (bottom) */
-        13% 36%, 
-        13% 29%, 
-        12% 29%, /* end of left inset (top) */
-        12% 7%, 
+        14% 36%, 
+        14% 24%, 
+        12% 24%, /* end of left inset (top) */
+        12% 9%, 
+        14% 7%, 
         76% 7%, 
         87% 16%, 
         87% 34%, /* start of right inset (top) */
@@ -212,31 +212,55 @@ body {
         87% 38%, /* start of right inset (bottom) */
         87% 92%
     );
-    backdrop-filter: blur(13.6px);
+    backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(13.6px);
 }
 
-.project-icon-image-container {
+.project-icon-container {
     position: relative;
-    top: 9px;
-    left: 4.5px;
-    width: 90%;
-    height: 90%;
-    background: #475a61;
-    background: #dfeae8;
+    top: 4px;
+    left: 2px;
+    width: 95%;
+    height: 98%;
+    background: rgba(0,0,0,0.4);
     border: .2px solid var(--dark-gray);
     border-radius: 5px;
     backdrop-filter: blur(13.6px);
+
+    /* background: #dfeae8;
+    background: #475a61;
+    opacity: .5; */
+}
+
+.data-slot {
+    /* display: grid;
+    justify-content: end;
+    align-items: end; */
+    /* font-size: 1.2em; */
+    position: relative;
+    bottom: 38px;
+    left: -35px;
+    width: 50%;
+    height: 10%;
+    rotate: 270deg;
+    background: #f5dc8a;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.data-slot-separator {
+    rotate: 270deg;
+    width: 100%;
+    height: 11%;
+    background: var(--dark-gray);
 }
 
 .container-posters {
     width: 100%;
     height: 100%;
     object-fit: fill;
-}
-
-.project-icon-image-container:nth-child(2) {
-    background: #d9fe00;
 }
 
 iframe {
@@ -310,7 +334,20 @@ iframe {
 }
 
 .my-name {
-    color: var(--dark-teal);
+    /* color: var(--dark-teal);
+    color: var(--cadmium-yellow); */
+
+    /* background: linear-gradient(90deg, #fd6644, #ff213c 12%, #fd6644 25%, #fc906c 45%, #ebbbba 80%); */
+    /* background: linear-gradient(90deg, #fc906c, #ff213c 12%, #fd6644 20%, #fc906c 35%, #ebbbba 80%, #e2cadf 100%); */
+    /* background: radial-gradient(circle, #e2cadf, #fc906c, #ff213c, #ebbbba); */
+    /* background: radial-gradient(circle, #ff213c 10%, #fd6644 64%, #fc906c 79%, #ebbbba 100%); */
+    /* background: radial-gradient(circle, #ff213c 10%, #fd6644 64%, #fc906c 79%, #ebbbba 100%); */
+    /* background: linear-gradient(270deg, #bfff00 31%, #dadada 100%); */
+    background: linear-gradient(270deg, #bfff00 70%, #dadada 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-me-content {
@@ -356,7 +393,7 @@ iframe {
 }
 
 .skills ul {
-    border-left: 1px solid var(--soft-blue);
+    border-left: 1px solid var(--white);
     margin-top: .5em;
     margin-left: 1em;
     padding-left:1em;
@@ -382,7 +419,7 @@ iframe {
     color: var(--black);
     border: none;
     padding: .5em 1.2em;
-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     font-weight: 400;
