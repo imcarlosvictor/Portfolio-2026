@@ -65,14 +65,27 @@
 			{% block context %}
 				{% for project in projects %}
 					<div class="project-list-items">
-						<div class="project-icon-card">
-							<div class="project-icon-container">
+						<div class="">
+							<div class="project-icon-card">
+								<div class="project-icon-container">
+								</div>
+								<div class="data-slot">
+									<div class="data-slot-separator"></div>
+									<div class="data-slot-separator"></div>
+									<div class="data-slot-separator"></div>
+									<div class="data-slot-separator"></div>
+								</div>
 							</div>
-							<div class="data-slot">
-								<div class="data-slot-separator"></div>
-								<div class="data-slot-separator"></div>
-								<div class="data-slot-separator"></div>
-								<div class="data-slot-separator"></div>
+
+							<div class="project-cta">
+								<div class="project-github-btn">
+									<a href="{{ project.github_url }}" target="_blank">
+										<i class='fa-brands fa-github' id="project-github-button"></i>
+									</a>
+								</div>
+								<div class="project-live-btn">
+									<a href="{{ project.live_url }}" target="_blank" class="live_btn">Live<span class="live-icon"></span></a>
+								</div>
 							</div>
 						</div>
 						<div class="project-information-container">
@@ -82,16 +95,6 @@
 							<div class="project-description">
 								<p>{{ project.description }}</p>
 								<p>description</p>
-							</div>
-							<div class="project-cta">
-								<div class="project-github-btn">
-									<p>{{ project.github_url }}</p>
-									<p>github</p>
-								</div>
-								<div class="project-live-btn">
-									<p>{{ project.live_url }}</p>
-									<p>live</p>
-								</div>
 							</div>
 						</div>
 					</div>

@@ -187,11 +187,7 @@ body {
     height: 180px;
     padding: 24px;
     /* background: #bbc9c7; */
-    /* background: #565d72; */
-    background: #444959;
-    background: linear-gradient(0deg, #5f687b 10%, #444959 100%);
-    background: linear-gradient(0deg, #222222 10%, var(--washed-black) 100%);
-    color: var(--black);
+    background: #181f1f;
     box-shadow: 0 20px 40px rgba(0,0,0,0.02);
     clip-path: polygon(
         5% 92%, 
@@ -222,7 +218,7 @@ body {
     left: 2px;
     width: 95%;
     height: 98%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.8);
     border: .2px solid var(--dark-gray);
     border-radius: 5px;
     backdrop-filter: blur(13.6px);
@@ -271,7 +267,7 @@ iframe {
 }
 
 .project-title {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 500;
     background: var(--washed-grey);
     width: 100%;
@@ -280,12 +276,11 @@ iframe {
 
 .project-information-container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    margin-top: .5em;
-    /* padding: .8em; */
-    /* background: var(--dark-gray); */
+    grid-template-rows: 1fr 3fr;
+    /* margin-top: .5em; */
     border: 1.5px solid var(--dark-gray);
     width: 100%;
+    height: 100%;
 }
 
 .project-description {
@@ -295,21 +290,68 @@ iframe {
 }
 
 .project-cta {
-    /* display: grid;
-    grid-template-columns: 2fr 1fr; */
+    margin-left: .8em;
     display: flex;
-    justify-self: end;
-    margin-top: .5em;
+    justify-self: start;
     gap: .1em;
 }
 
 .project-github-btn, .project-live-btn {
-    margin: .2em 0 0.2em;
-    padding: .6em 1.2em;
+    padding: .3em;
     border: none;
-    background: var(--dark-gray);
     color: var(--white);
     cursor: pointer;
+}
+
+#project-github-button {
+    font-size: 1.2em;
+    margin-top: .5em;
+}
+
+.live-icon {
+  display: inline-block;
+  position: relative;
+  top: calc(50% - 5px);
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  margin-left: 15px;
+  border: 1px solid rgba(black, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(red, 0.6);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: live 2s ease-in-out infinite;
+    z-index: -1;
+  }
+}
+
+@keyframes live {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(3.5, 3.5);
+    background-color: rgba(red, 0);
+  }
+}
+
+.live_btn {
+    background: var(--dark-gray);
+    color: var(--white);
+    padding: .5em .7em .5em;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 /* ------------------------------------------------------------------------------- */
