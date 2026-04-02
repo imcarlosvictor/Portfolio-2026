@@ -1,8 +1,9 @@
 :root {
     /* --white: #dfdfdf; */
     --white: #afbbbd;
-    /* --black: #111111; */
     --black: #0a0a0a;
+    --black: #181a1b;
+    --black: #111111;
     /* --black: #05090a; */
     --washed-black: #1a2121;
     --dark-gray: #212221;
@@ -168,11 +169,11 @@ body {
     /* min-height: 100vh; */
 
     /* Crosshair pattern */
-    background-image:
+    /* background-image:
         linear-gradient(45deg, rgba(26, 26, 26, 0.35) 4px, transparent 4px),
         linear-gradient(-45deg, rgba(34, 34, 34, 0.35) 4px, transparent 4px);
     background-size: 60px 60px;
-    background-position: 0 0, 0 0;
+    background-position: 0 0, 0 0; */
 
 }
 
@@ -189,6 +190,7 @@ body {
     padding: 24px;
     /* background: #bbc9c7; */
     background: #181f1f;
+    background: var(--washed-grey);
     box-shadow: 0 20px 40px rgba(0,0,0,0.02);
     clip-path: polygon(
         5% 92%, 
@@ -216,14 +218,15 @@ body {
 .project-icon-container {
     position: relative;
     top: 4px;
-    left: 2px;
-    width: 95%;
+    left: 4px;
+    width: 90%;
     height: 98%;
-    background: rgba(0,0,0,0.8);
-    border: .2px solid var(--dark-gray);
     border-radius: 5px;
     backdrop-filter: blur(13.6px);
-    background: var(--black);
+    /* border: .2px solid var(--dark-gray); */
+    border: .2px solid var(--black);
+    background: #131919;
+    background: #1c1c1c;
 
     /* background: #dfeae8;
     background: #475a61;
@@ -231,10 +234,6 @@ body {
 }
 
 .data-slot {
-    /* display: grid;
-    justify-content: end;
-    align-items: end; */
-    /* font-size: 1.2em; */
     position: relative;
     bottom: 38px;
     left: -35px;
@@ -242,6 +241,7 @@ body {
     height: 10%;
     rotate: 270deg;
     background: #f5dc8a;
+    background: #a5a5a5;
 
     display: flex;
     justify-content: space-around;
@@ -272,6 +272,7 @@ iframe {
     font-size: 1.1em;
     font-weight: 500;
     background: var(--washed-grey);
+    background: #1d1d1d;
     width: 100%;
     padding: .5em;
 }
@@ -293,10 +294,10 @@ iframe {
 }
 
 .project-cta {
-    margin-left: .8em;
+    margin-left: 1em;
     display: flex;
     justify-self: start;
-    gap: .1em;
+    gap: .7em;
 }
 
 .project-github-btn, .project-live-btn {
@@ -311,50 +312,25 @@ iframe {
     margin-top: .5em;
 }
 
-.live-icon {
-  display: inline-block;
-  position: relative;
-  top: calc(50% - 5px);
-  background-color: red;
-  width: 10px;
-  height: 10px;
-  margin-left: 15px;
-  border: 1px solid rgba(black, 0.1);
-  border-radius: 50%;
-  z-index: 1;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: rgba(red, 0.6);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    animation: live 2s ease-in-out infinite;
-    z-index: -1;
-  }
-}
-
-@keyframes live {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(3.5, 3.5);
-    background-color: rgba(red, 0);
-  }
-}
-
 .live_btn {
-    background: var(--dark-gray);
-    color: var(--white);
+    width: 100%;
     padding: .5em .7em .5em;
-    border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+
+    background: #2c1819;
+    border: 1px solid rgba(215,71,46, 0.9);
+    border-radius: 5%;
+    color: #d7472e;
+}
+
+.live_btn:hover {
+    background: #d7472e;
+    color: var(--black);
+    border: 1px solid rgba(215,71,46, 0.9);
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -386,10 +362,10 @@ iframe {
     /* background: linear-gradient(90deg, #fc906c, #ff213c 12%, #fd6644 20%, #fc906c 35%, #ebbbba 80%, #e2cadf 100%); */
     /* background: radial-gradient(circle, #e2cadf, #fc906c, #ff213c, #ebbbba); */
     /* background: radial-gradient(circle, #ff213c 10%, #fd6644 64%, #fc906c 79%, #ebbbba 100%); */
-    background: radial-gradient(circle, #ff213c 10%, #fd6644 64%, #fc906c 79%, #ebbbba 100%);
+    /* background: radial-gradient(circle, #ff213c 10%, #fd6644 64%, #fc906c 79%, #ebbbba 100%); */
     /* background: linear-gradient(270deg, #bfff00 70%, #c1fc1d 100%); */
     /* background: linear-gradient(270deg, #bfff00 31%, #dadada 100%); */
-    /* background: linear-gradient(270deg, #bfff00 70%, #dadada 100%); */
+    background: linear-gradient(270deg, #bfff00 70%, #dadada 100%);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
